@@ -6,8 +6,4 @@ describe 'greeting' do
 
     greeting("you")
   end
-
-  it 'mocking' do
-    
-  end
 end
