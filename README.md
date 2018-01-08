@@ -12,15 +12,20 @@ It is inarguable that the advent of personal computing has changed the world and
 
 ## CLI Flow
 The basic flow of a CLI app goes something like this:
+기본적인 흐름 오브 CLI 앱은 이렇게 돌아갑니다
 
 1. Greet the user.
+유저를 반긴다
 2. Ask the user for input.
+유저의 입력을 물어본다
 3. Capture and store that input.
 4. Do something with that input.
 
-In this exercise, we'll be familiarizing ourselves with a CLI application that has already been built. To experience the user-flow of this application, first open this lab.
+In this exercise, we'll be familiarizing ourselves with a CLI application that
+has already been built. To experience the user-flow of this application,
+first open this lab.
 
-Run `learn` 
+Run `learn`
 
 You'll need to modify the `greeting` method in `lib/hello_ruby_programmer.rb` so
 that it accepts an argument called `name`.
@@ -48,14 +53,26 @@ lib
 Let's take a moment to review:
 
 ### The `bin` Directory
-The `bin` directory holds our **executable** file. This file is responsible for running the program. It contains code that actually enacts the command line interaction––i.e. greeting the user, asking the user for input, storing that input and then acting on it.
+The `bin` directory holds our **executable** file.
+This file is responsible for running the program.
+It contains code that actually enacts the command line interaction––
+i.e. greeting the user,
+ asking the user for input,
+  storing that input and then acting on it.
 
-Open up `bin/greeting`. Notice that we are requiring the `lib/hello_ruby_programmer.rb` file.
+Open up `bin/greeting`.
+Notice that we are requiring the `lib/hello_ruby_programmer.rb` file.
 
 ### The `lib` Directory
-The `lib` directory is where we place the code that our program relies on to run. It is the meat of our CLI application. Our executable file *requires* the files in the `lib` directory and uses the code (for example, calling on any methods we might define) to enact the CLI.
+The `lib` directory is
+where we place the code that our program relies on to run.
+It is the meat of our CLI application.
+Our executable file *requires* the files in the `lib` directory
+and uses the code (for example, calling on any methods we might define) to enact the CLI.
 
-Open up `lib/hello_ruby_programmer.rb` file. Notice that it defines a `#greeting` method that is called in the `bin/greeting` file. This is the pattern you'll become familiar with for CLI applications––defining methods in a `lib` directory and calling those methods in `bin` executable files to actually run the program.
+Open up `lib/hello_ruby_programmer.rb` file. Notice that it defines a
+`#greeting` method that
+is called in the `bin/greeting` file. This is the pattern you'll become familiar with for CLI applications––defining methods in a `lib` directory and calling those methods in `bin` executable files to actually run the program.
 
 Now, let's take a closer look at our code.
 
@@ -128,7 +145,7 @@ The return value of `gets` is the text typed into the terminal. So, setting a va
 
 Once we store the return value of `gets` in a variable, we can treat that variable as we would any variable pointing to a string––interpolate with it, convert it to an integer, add it to an array, you name it.
 
-Remember to run `learn submit` so you can move on to the next lesson. 
+Remember to run `learn submit` so you can move on to the next lesson.
 
 ### Advanced: How `gets` gets input from the terminal
 We already know, in general terms, how the `puts` method outputs text to the terminal, but here's a reminder from an earlier lesson, "Puts, Print and Return":
